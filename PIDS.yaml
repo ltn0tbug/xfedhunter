@@ -1,0 +1,21 @@
+mode: "Simulation"
+fed_model: "FedAvg"
+verbose: True
+server:
+  n_client: 10
+  r: 10
+  lr_s: 1
+  model: "GraphHuntermodel"
+
+
+client:
+  compile:
+    optim: "Adam"
+    lr: 0.001
+  train:
+    epochs: 100
+
+dataset:
+  name:
+    - "cadets"
+  test_size: 0.3

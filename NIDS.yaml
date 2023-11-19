@@ -1,0 +1,24 @@
+mode: "Simulation"
+fed_model: "FedAvg"
+verbose: True
+server:
+  n_client: 10
+  r: 10
+  lr_s: 1
+  model: "NFHuntermodel"
+
+
+client:
+  compile:
+    optim: "Adam"
+    lr: 0.001
+  train:
+    verbose: 0
+    epochs: 3
+    batch_size: 128
+
+dataset:
+  name:
+    - "NF-Ton-IoT"
+  test_size: 0.3
+  sequence_length: 32
